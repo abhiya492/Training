@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Table</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="highlight">Nested Table with Name Split</h1>
+  <p>use of <b>colspan</b>, <b>nested tables</b>, and <u>HTML formatting</u>.</p>
+
+  <table>
+    <!-- Header Row -->
+    <tr>
+      <th colspan="2">Name</th>
+      <th rowspan="2">Details</th>
+    </tr>
+    <tr>
+      <th>First Name</th>
+      <th>Second Name</th>
+    </tr>
+
+    <!-- Data Row -->
+    <tr>
+      <td>Abhishek</td>
+      <td>Singh</td>
+      <td>
+        <!-- Nested Table -->
+        <table>
+          <tr>
+            <td>Email</td>
+            <td>abhi@example.com</td>
+          </tr>
+          <tr>
+            <td>Skills</td>
+            <td>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <p style="color: green;" id="footer" class="highlight">This is a demo using <code>colspan</code> and nested tables.</p>
+  <a href="1.1.html" target="_blank">Go to Registration Form</a>
+
+</body>
+</html>
