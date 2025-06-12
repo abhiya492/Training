@@ -85,6 +85,15 @@
       background-color: #357abd;
     }
 
+    .visually-hidden {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
     @media (max-width: 480px) {
       .card {
         padding: 1.5rem 1rem;
@@ -105,7 +114,7 @@
     }
   </style>
 </head>
-<body>
+    <label for="country" class="visually-hidden">Country</label>
   <div class="card">
     <img src="spider-man-6551673_1280.jpg" alt="Profile Picture" class="profile-img">
     <h2>Abhishek Singh</h2>
