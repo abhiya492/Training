@@ -1,0 +1,146 @@
+/* Base Reset & Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #dbeafe, #e0f2fe, #f0f9ff);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* Calculator Container with Glassmorphism */
+.calculator {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  padding: 30px 25px;
+  width: 340px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Display Area */
+#display {
+  width: 100%;
+  height: 65px;
+  font-size: 30px;
+  padding: 15px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  color: #0f172a;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* Button Styles */
+.btn {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #0f172a;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.1s ease;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Equals Button */
+.equals {
+  grid-row: span 2;
+  background: linear-gradient(to bottom right, #22c55e, #16a34a);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
+}
+
+.equals:hover {
+  background: linear-gradient(to bottom right, #16a34a, #15803d);
+}
+
+/* Clear Button (C) */
+.btn:nth-child(1) {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.5);
+}
+
+.btn:nth-child(1):hover {
+  background: linear-gradient(to right, #dc2626, #b91c1c);
+}
+
+/* Operator Buttons */
+.btn:nth-child(2),
+.btn:nth-child(3),
+.btn:nth-child(4),
+.btn:nth-child(8),
+.btn:nth-child(12),
+.btn:nth-child(16) {
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 3px 14px rgba(59, 130, 246, 0.35);
+}
+
+.btn:nth-child(2):hover,
+.btn:nth-child(3):hover,
+.btn:nth-child(4):hover,
+.btn:nth-child(8):hover,
+.btn:nth-child(12):hover,
+.btn:nth-child(16):hover {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+}
+
+/* Zero spans 2 columns */
+.zero {
+  grid-column: span 2;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 400px) {
+  .calculator {
+    width: 90%;
+    padding: 25px 18px;
+  }
+
+  .btn {
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  #display {
+    font-size: 24px;
+    padding: 12px;
+  }
+}
